@@ -1,0 +1,9 @@
+#customVideo::-webkit-media-controls {
+    display: none !important;
+  }
+
+  .loginCard{
+    background-color: rgba(255, 255, 255, 0.986);
+    /* filter: blur(1px); */
+    box-shadow: 0 0 10px #000;
+  }
