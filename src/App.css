@@ -7,3 +7,24 @@
     /* filter: blur(1px); */
     box-shadow: 0 0 10px #000;
   }
+
+  .nav-dropDown{
+    background-color: rgba(255, 254, 254, 0.738);
+    filter: blur(0.5px);
+    box-shadow: 0 0 10px #000;
+  }
+  table, th,td{
+    border: 1px solid black;
+  }
+
+.customers{
+  background-image: url('https://images7.alphacoders.com/133/1330531.png');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 500px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
