@@ -5,12 +5,12 @@ const Layout = ({ children }) => {
   return (
     <div>
        <div className="">
-        <div className="pb-[90px]">
+        <div >
           <Header/>
         </div>
 						{children}
 			</div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
