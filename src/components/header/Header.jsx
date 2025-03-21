@@ -38,20 +38,60 @@ const Header = () => {
 
   const menuItems = [
     {
-      label: "Company",
+      label: "COMPANY",
       path: "/company",
       subItems: [
-        { label: "소규모사업장", path: "/contents" },
-        { label: "연혁 및 추진체계", path: "/history_promotion" },
-        { label: "대기오염물질배출시설", path: "/air-polutant" },
+        // { label: "회사소개", path: "/contents" },
+        { label: "연혁", path: "/facility-status" },
+        { label: "시설현황", path: "/facility-status" },
+        { label: "오시는길", path: "/directions" },
       ],
     },
     {
-      label: "IoT",
-      path: "/iot",
+      label: "BUSINESS",
+      path: "/main-busines",
       subItems: [
-        { label: "디바이스", path: "/history_promotion" },
-        { label: "네트워크", path: "/history_promotion" },
+        { label: "환경측정분석", path: "/environmrnt-consulting" },
+        { label: "환경컨설팅", path: "#" },
+        { label: "환경플랜트", path: "#" },
+        { label: "시설물유지보수", path: "#" },
+      ],
+    },
+    {
+      label: "IoT 관리시스템",
+      path: "#",
+      subItems: [
+        { label: "환경측정분석", path: "#" },
+      ],
+    },
+    {
+      label: "REFERENCE",
+      path: "#",
+      subItems: [
+        { label: "환경측정분석", path: "#" },
+        { label: "환경컨설팅", path: "#" },
+        { label: "환경플랜트", path: "#" },
+        { label: "시설물유지보수", path: "#" },
+      ],
+    },
+    {
+      label: "CUSTOMER",
+      path: "#",
+      subItems: [
+        { label: "견적문의", path: "#" },
+        { label: "신청서양식", path: "#" },
+        { label: "고객지원", path: "#" },
+        { label: "FAQ", path: "#" },
+        { label: "Q&A", path: "#" },
+      ],
+    },
+    {
+      label: "NOTICE",
+      path: "#",
+      subItems: [
+        { label: "공지사항", path: "#" },
+        { label: "인재채용", path: "#" },
+        
       ],
     },
   ];
@@ -68,11 +108,11 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all ${
+      className={`fixed w-full top-0 z-50 transition-all py-5 ${
         scrolling ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto flex justify-between items-center p-4">
+      <div className="container mx-auto flex justify-between items-center p-4">
         <Link to="/">
           {scrolling ? (
             <img
@@ -96,7 +136,9 @@ const Header = () => {
             >
               <Link
                 to={item.path}
-                className={`text-xl transition-all font-bold ${scrolling ? 'text-black' : 'text-white'}`}
+                className={`text-xl transition-all font-bold ${
+                  scrolling ? "text-black" : "text-white"
+                }`}
               >
                 {item.label}
               </Link>
@@ -107,7 +149,7 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
+                    className="absolute left-0  bg-white shadow-lg rounded-md w-40 z-50"
                   >
                     {item.subItems.map((subItem, subIndex) => (
                       <li
@@ -126,7 +168,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2"
+          className="lg:hidden p-2 text-white"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}

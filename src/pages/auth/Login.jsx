@@ -14,26 +14,20 @@ const Login = () => {
     };
 
     try {
-      const { data } = await axios.post(
+      await axios.post(
         "http://192.168.23.249:8085/kefa/v1/auth/log-in",
         { username, password },
         config
       );
-
-      // if (data.accessToken) {
-      //   localStorage.setItem("authToken", data.accessToken);
-        window.location.href = "https://www.kefaelectronic.com/aboutus.html#jnBqrKrjkrqijiqrprr";
-      // }
+      window.location.href = "https://kefa-dev.com/";
     } catch (error) {
       alert(error.response?.data?.message || "로그인 실패");
     }
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg max-w-96">
-      <div className="flex items-center justify-between">
-        <h2 className="mb-4 text-lg font-bold">로그인</h2>
-      </div>
+    <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="mb-4 text-lg font-bold text-center">로그인</h2>
       <form onSubmit={handleLogin}>
         <input
           type="text"
@@ -47,7 +41,6 @@ const Login = () => {
           className="w-full p-2 mb-4 border rounded"
           onChange={(e) => setPassword(e.target.value)}
         />
-
         <button className="w-full p-2 text-white bg-blue-600 rounded hover:bg-blue-700">
           로그인
         </button>

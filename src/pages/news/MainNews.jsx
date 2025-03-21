@@ -3,24 +3,24 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const MainNews = () => {
   return (
-    <section className="max-w-[1400px] m-auto mt-[80px] ">
+    <section className="container ">
         <h1 className="text-4xl text-center">NEWS</h1>
         <p className="mt-3 text-center">KEFA의 최신 소식을 전해드립니다.</p>
         
-        <div>
-            <div className="flex items-center justify-between border-b-[1px] border-gray-400 w-full p-7 ">
-                <Link to='/' className="text-xl hover:text-blue-600">[KEFA] [환경부] 낙동강 물문제 해소를 위해 관계기관..</Link>
-                <h2 className="text-xl">2019-04-30</h2>
+        <div className="mt-10">
+            <div className="flex items-center justify-between border-b-[1px] border-gray-400 w-full p-7 gap-8">
+                <Link to='/' className="text-[13px] sm:text-[16px] md:text-xl hover:text-blue-600">[KEFA] [환경부] 낙동강 물문제 해소를 위해 관계기관..</Link>
+                <h2 className="text-[12px] sm:text-[16px] md:text-xl">2019-04-30</h2>
             </div>
             
-            <div className="flex items-center justify-between border-b-[1px] border-gray-400 w-full p-7 ">
-                <Link to='/' className="text-xl hover:text-blue-600">[KEFA] [환경부] 낙동강 물문제 해소를 위해 관계기관..</Link>
-                <h2 className="text-xl">2019-04-30</h2>
+            <div className="flex items-center justify-between border-b-[1px] border-gray-400 w-full p-7 gap-8">
+                <Link to='/' className="text-[13px] sm:text-[16px] md:text-xl hover:text-blue-600">[KEFA] [환경부] 낙동강 물문제 해소를 위해 관계기관..</Link>
+                <h2 className="text-[12px] sm:text-[16px] md:text-xl">2019-04-30</h2>
             </div>
             
-            <div className="flex items-center justify-between border-b-[1px] border-gray-400 w-full p-7 ">
-                <Link to='/' className="text-xl hover:text-blue-600">[KEFA] [환경부] 낙동강 물문제 해소를 위해 관계기관..</Link >
-                <h2 className="text-xl">2019-04-30</h2>
+            <div className="flex items-center justify-between border-b-[1px] border-gray-400 w-full p-7 gap-8">
+                <Link to='/' className="text-[13px] sm:text-[16px] md:text-xl hover:text-blue-600">[KEFA] [환경부] 낙동강 물문제 해소를 위해 관계기관..</Link >
+                <h2 className="text-[12px] sm:text-[16px] md:text-xl">2019-04-30</h2>
             </div>
         </div>
         
