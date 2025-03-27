@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import bgImg from '../../assets/mainBusines.jpg'
+import EnvirontMentTab2 from '../../components/environtment-tabs/EnvirontMentTab2';
+import EnvirontMentTab3 from '../../components/environtment-tabs/environtMentTab3';
+import EnvironmenttTab1 from '../../components/environtment-tabs/EnvironmenttTab1';
+
+
 
 const EnvironmentConsulting = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const tabs = ["Tab 1", "Tab 2", "Tab 3"];
+  const tabs = ["환경인허가", "통합환경인허가", "환경관리대행"];
   const content = [
-    "Bu birinchi tabning mazmuni.",
-    "Bu ikkinchi tabning mazmuni.",
-    "Bu uchinchi tabning mazmuni."
+    <EnvironmenttTab1/>,
+    <EnvirontMentTab2/>,
+    <EnvirontMentTab3/>
   ];
   
   return (
@@ -24,26 +29,27 @@ const EnvironmentConsulting = () => {
               대상 : 19개 업종 대기 또는 수질 1·2종 사업장(중,소규모 사업장은 자발적 통합 허가 신청가능)
               적용시기 : 17년부터 5년간 단계적 시행(중,소규모 사업장은 자발적 통합 허가 신청가능)</p>
                     </div>
-
-
-
                     <div className="container mt-10">
-      <div className="flex border-b">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`flex-1 py-2 text-center border-b-2 transition-all duration-300 ${
-              activeTab === index
-                ? "border-blue-500 text-blue-500"
-                : "border-transparent text-gray-500 hover:text-blue-500"
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
+                    <div className="flex border-b border-gray-300 mt-14">
+  {tabs.map((tab, index) => (
+    <button
+      key={index}
+      onClick={() => setActiveTab(index)}
+      className={`flex-1 py-3 text-center text-lg font-medium transition-all duration-300 rounded-t-lg cursor-pointer
+        ${
+          activeTab === index
+            ? "border-b-4 border-blue-500 text-blue-600 bg-gray-100"
+            : "border-b-4 border-transparent text-gray-500 hover:text-blue-500 hover:bg-gray-50"
+        }`}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
+
+      <div className="p-4  mt-9 rounded-md">
+          {content[activeTab]}
       </div>
-      <div className="p-4 bg-gray-100 mt-2 rounded-md">{content[activeTab]}</div>
     </div>
       </div>
     )

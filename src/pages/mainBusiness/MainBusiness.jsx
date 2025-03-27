@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bgImg from '../../assets/mainBusines.jpg'
+import BusinesTab1 from '../../components/Busines-tabs/BusinesTab1';
+import BusinesTab2 from '../../components/Busines-tabs/BusinesTab2';
+import BusinesTab3 from '../../components/Busines-tabs/BusinesTab3';
+import BusinesTab4 from '../../components/Busines-tabs/BusinesTab4';
 
 const MainBusiness = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const tabs = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"];
+  const content = [
+       <BusinesTab1/>,
+       <BusinesTab2/>,
+       <BusinesTab3/>,
+       <BusinesTab4/>
+        
+  ];
   return (
     <div>
       <div className='h-[70vh] bg-no-repeat w-full flex items-center justify-center' style={{backgroundImage:`url(${bgImg})`,  backgroundPosition:'center'}}>
@@ -20,7 +33,28 @@ const MainBusiness = () => {
             <h2 className='text-xl mt-3'>빠른 내선 번호 안내</h2>
             <p className=''>IoT : 1번, 대기 :2번, 수질 :3번, 악취 : 4번, 소음진동 : 5번, 시설유지보수 : 6번, 그외 문의 : 0번</p>
         </div>
-        <div className=''></div>
+        <div className="container mt-10">
+                    <div className="flex border-b border-gray-300 mt-14">
+  {tabs.map((tab, index) => (
+    <button
+      key={index}
+      onClick={() => setActiveTab(index)}
+      className={`flex-1 py-3 text-center text-lg font-medium transition-all duration-300 rounded-t-lg cursor-pointer
+        ${
+          activeTab === index
+            ? "border-b-4 border-blue-500 text-blue-600 bg-gray-100"
+            : "border-b-4 border-transparent text-gray-500 hover:text-blue-500 hover:bg-gray-50"
+        }`}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
+
+      <div className="p-4  mt-9 rounded-md">
+          {content[activeTab]}
+      </div>
+    </div>
       </div>
     </div>
   )
