@@ -59,9 +59,9 @@ const Header = () => {
     },
     {
       label: "IoT 관리시스템",
-      path: "#",
+      path: "/ioTSystem",
       subItems: [
-        { label: "환경측정분석", path: "#" },
+        { label: "환경측정분석", path: "/ioTSystem" },
       ],
     },
     {

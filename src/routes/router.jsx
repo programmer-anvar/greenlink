@@ -6,6 +6,7 @@ import FacilityyStatus from "../pages/facility-status/FacilityyStatus";
 import MainBusiness from "../pages/mainBusiness/MainBusiness";
 import Directions from "../pages/directions/Directions";
 import EnvironmentConsulting from "../pages/mainBusiness/EnvironmentConsulting";
+import IoTSystem from "../pages/IoT-System/IoTSystem";
 
 export const protectedRouter = createBrowserRouter([
     {
@@ -55,6 +56,14 @@ export const protectedRouter = createBrowserRouter([
         element:(
             <Layout>
                 <EnvironmentConsulting/>
+            </Layout>
+        )
+    },
+    {
+        path:'/ioTSystem',
+        element:(
+            <Layout>
+                <IoTSystem/>
             </Layout>
         )
     },
