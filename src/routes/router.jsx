@@ -7,6 +7,11 @@ import MainBusiness from "../pages/mainBusiness/MainBusiness";
 import Directions from "../pages/directions/Directions";
 import EnvironmentConsulting from "../pages/mainBusiness/EnvironmentConsulting";
 import IoTSystem from "../pages/IoT-System/IoTSystem";
+import MainReference from "../pages/reference-pages/MainReference";
+import EnvironmentalConsulting from "../pages/reference-pages/environmental-consulting/EnvironmentalConsulting";
+import EnvironmentalPlant from "../pages/reference-pages/environmental-plant/EnvironmentalPlant";
+import FacilityMaintenance from "../pages/reference-pages/facility-maintenance/FacilityMaintenance";
+import MainCustomer from "../pages/main-customer/MainCustomer";
 
 export const protectedRouter = createBrowserRouter([
     {
@@ -64,6 +69,46 @@ export const protectedRouter = createBrowserRouter([
         element:(
             <Layout>
                 <IoTSystem/>
+            </Layout>
+        )
+    },
+    {
+        path:'/reference',
+        element:(
+            <Layout>
+                <MainReference/>
+            </Layout>
+        )
+    },
+    {
+        path:'/environmental-consulting',
+        element:(
+            <Layout>
+                <EnvironmentalConsulting/>
+            </Layout>
+        )
+    },
+    {
+        path:'/environmental-plant',
+        element:(
+            <Layout>
+                <EnvironmentalPlant/>
+            </Layout>
+        )
+    },
+    {
+        path:'/facility-maintenance',
+        element:(
+            <Layout>
+                <FacilityMaintenance/>
+            </Layout>
+        )
+    },
+    {
+        path:'/customer',
+        element:(
+            <Layout>
+                <MainCustomer/>
             </Layout>
         )
     },

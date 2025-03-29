@@ -66,17 +66,17 @@ const Header = () => {
     },
     {
       label: "REFERENCE",
-      path: "#",
+      path: "/reference",
       subItems: [
-        { label: "환경측정분석", path: "#" },
-        { label: "환경컨설팅", path: "#" },
-        { label: "환경플랜트", path: "#" },
-        { label: "시설물유지보수", path: "#" },
+        { label: "환경측정분석", path: "/environmental-consulting" },
+        { label: "환경컨설팅", path: "/environmental-plant" },
+        { label: "환경플랜트", path: "/facility-maintenance" },
+        // { label: "시설물유지보수", path: "#" },
       ],
     },
     {
       label: "CUSTOMER",
-      path: "#",
+      path: "/customer",
       subItems: [
         { label: "견적문의", path: "#" },
         { label: "신청서양식", path: "#" },
