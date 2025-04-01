@@ -12,6 +12,9 @@ import EnvironmentalConsulting from "../pages/reference-pages/environmental-cons
 import EnvironmentalPlant from "../pages/reference-pages/environmental-plant/EnvironmentalPlant";
 import FacilityMaintenance from "../pages/reference-pages/facility-maintenance/FacilityMaintenance";
 import MainCustomer from "../pages/main-customer/MainCustomer";
+import Applicationform from "../pages/main-customer/Applicationform";
+import CustomerSupport from "../pages/main-customer/CustomerSupport";
+import Faq from "../pages/main-customer/Faq";
 
 export const protectedRouter = createBrowserRouter([
     {
@@ -109,6 +112,30 @@ export const protectedRouter = createBrowserRouter([
         element:(
             <Layout>
                 <MainCustomer/>
+            </Layout>
+        )
+    },
+    {
+        path:'/application-form',
+        element:(
+            <Layout>
+                <Applicationform/>
+            </Layout>
+        )
+    },
+    {
+        path:'/customer-support',
+        element:(
+            <Layout>
+                <CustomerSupport/>
+            </Layout>
+        )
+    },
+    {
+        path:'/faq',
+        element:(
+            <Layout>
+                <Faq/>
             </Layout>
         )
     },

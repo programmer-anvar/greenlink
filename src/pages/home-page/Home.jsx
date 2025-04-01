@@ -5,6 +5,7 @@ import AurBusiness from '../aurBusiness/AurBusiness';
 import MainNews from '../news/MainNews';
 import ReferenceMain from '../reference/ReferenceMain';
 import img from './heroImg.png'
+import bgImg from './homeBg.avif'
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -30,7 +31,7 @@ const Home = () => {
 <div
   className="w-full h-screen "
   style={{
-    backgroundImage: `url('https://img.freepik.com/free-photo/person-working-html-computer_23-2150038841.jpg')`,
+    backgroundImage: `url(${bgImg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
